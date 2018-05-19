@@ -195,32 +195,42 @@ Arrow down
 =========================
 Content boxes
 =========================*/
-.content-box-lg{
+
+.content-box-lg {
     padding: 120px 0;
 }
+
+.content-box-md {
+    padding: 100px 0;
+}
+
 /*
 =========================
 vertical heading
 =========================*/
-.vertical-heading h5{
+
+.vertical-heading h5 {
     color: #f4c613;
     font-size: 14px;
     font-weight: 500;
     text-transform: uppercase;
     word-spacing: 9px;
     display: inline-block;
-    -webkit-transform: rotate(-90deg);transform: rotate(-90deg);
+    -webkit-transform: rotate(-90deg);
+    transform: rotate(-90deg);
     position: relative;
-    top:60px;
-    left:-65px;  
+    top: 60px;
+    left: -65px;
 }
-.vertical-heading h2{
-   margin: 0 0 0 35px;
-    font-size:42px;
-    font-weight:100;
+
+.vertical-heading h2 {
+    margin: 0 0 0 35px;
+    font-size: 42px;
+    font-weight: 100;
     line-height: 45px;
-    
+
 }
+
 /*
 =========================
 Part 1 about
@@ -229,44 +239,78 @@ Part 1 about
 #about-right p:first-child {
     margin-bottom: 30px;
 }
+
 #about-bottom img {
-  margin: 0 auto;  
+    margin: 0 auto;
 }
+
 #about-bottom {
-   margin-top: 60px;
+    margin-top: 60px;
 }
 
+/*
+=========================
+About part 2
+=========================*/
 
+#about-02 {
+    background-color: #f4f4f4;
+}
 
+.about-item {
+    background-color: #fff;
+    padding: 80px 30px;
+    -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, .2);
+    box-shadow: 0 0 10px rgba(0, 0, 0, .2);
 
+}
 
+.about-item i {
+    font-size: 42px;
+    margin: 0;
+}
 
+.about-item h3 {
+    font-size: 25px;
+    margin-bottom: 10px;
+}
 
+.about-item hr {
+    width: 45px;
+    height: 3px;
+    background-color: #f4c613;
+    margin: 0 auto;
+    border: none;
+}
 
+.about-item p {
+    margin-top: 20px;
+}
 
+.about-item:hover {
+    background-color: #f4c613;
+}
 
+.about-item:hover i,
+.about-item:hover h3,
+.about-item:hover p {
+    color: #fff;
+}
 
+.about-item:hover hr {
+    background-color: #fff;
+}
 
+.about-item:hover i {
+    transform: translateY(-20px);
+}
 
+/*Smooth transition*/
 
+.about-item,
+.about-item i,
+.about-item hr {
+    -webkit-transition: all 400ms ease-in-out;
+    transition: all 400ms ease-in-out;
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+}
