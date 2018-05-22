@@ -307,9 +307,7 @@ About part 2
 
 /*Smooth transition*/
 
-.about-item,
-.about-item i,
-.about-item hr {
+.about-item, * {
     -webkit-transition: all 400ms ease-in-out;
     transition: all 400ms ease-in-out;
 
