@@ -19,6 +19,7 @@ $(function(){
       loop:true,
       autoplayHoverPause:true,
       nav:true,
-      dots:false  
+      dots:false,
+      navText:['<i class = "fa fa-angle-left"></i>','<i class = "fa fa-angle-right"></i>' ]
   });
 });
