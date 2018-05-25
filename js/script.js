@@ -33,9 +33,18 @@ $(function () {
                 width: $(this).attr("aria-valuenow") + "%"
             }, 1000);
         });;
-        
+
         this.destroy();
     }, {
         offset: "bottom-in-view"
+    });
+});
+/*
+=========================
+Responsive Tabs
+=========================*/
+$(function () {
+    $("#services-tabs").responsiveTabs({
+
     });
 });
