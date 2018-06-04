@@ -55,13 +55,7 @@ Responsive Tabs
 =========================*/
 $(window).on("load", function () {
     //initialize isotope
-    
-//    $("#isotope-container").isotope({
-//        
-//    })
-    
-     //filter items on button click
-    
+ 
     $("#isotope-filters").on("click","button", function(){
 
     //get filter value
@@ -83,9 +77,20 @@ $(window).on("load", function () {
     
 });
 
-
-
-
+/*
+=========================
+Magnifier
+=========================*/
+$(function () {
+    $("#portfolio-wrapper").magnificPopup({
+        delegate: "a", // child items selector, by clicking on it popup will open
+        type: "image",
+        gallery: {
+            // options for gallery
+            enabled: true
+        },
+    });
+});
 
 
 
