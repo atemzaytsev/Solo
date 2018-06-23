@@ -11,7 +11,7 @@ $(window).on("load", function () {
 Team
 =========================*/
 $(function () {
-    $(".owl-carousel").owlCarousel({
+    $("#team-members").owlCarousel({
         items: 2,
         autoplay: true,
         smartSpeed: 700,
@@ -51,30 +51,30 @@ $(function () {
 
 /*
 =========================
-Responsive Tabs
+Isotope filter
 =========================*/
 $(window).on("load", function () {
     //initialize isotope
- 
-    $("#isotope-filters").on("click","button", function(){
 
-    //get filter value
-        
-    var filterValue = $(this).attr("data-filter");
-        
-    //filter portfolio 
-     $("#isotope-container").isotope({
-         
-        filter:filterValue
-        
-    });
-        
+    $("#isotope-filters").on("click", "button", function () {
+
+        //get filter value
+
+        var filterValue = $(this).attr("data-filter");
+
+        //filter portfolio 
+        $("#isotope-container").isotope({
+
+            filter: filterValue
+
+        });
+
         $("#isotope-filters").find(".active").removeClass("active")
         $(this).addClass("active");
-        
-        
+
+
     });
-    
+
 });
 
 /*
@@ -91,6 +91,54 @@ $(function () {
         },
     });
 });
+/*
+=========================
+Testimonials
+=========================*/
+$(function () {
+    $("#testimonial-slider").owlCarousel({
+        items: 1,
+        autoplay: true,
+        smartSpeed: 700,
+        loop: true,
+        autoplayHoverPause: true,
+        nav: true,
+        dots: false,
+        navText: ['<i class = "fa fa-angle-left"></i>', '<i class = "fa fa-angle-right"></i>']
+    });
+});
+
+/*
+=========================
+Stats
+=========================*/
+$(function () {
+    $('.counter').counterUp({
+        delay: 10,
+        time: 2000
+    });
+});
+
+/*
+=========================
+Clients
+=========================*/
+$(function () {
+    $("#clients-list").owlCarousel({
+        items: 6,
+        autoplay: true,
+        smartSpeed: 700,
+        loop: true,
+        autoplayHoverPause: true,
+        nav: true,
+        dots: false,
+        navText: ['<i class = "fa fa-angle-left"></i>', '<i class = "fa fa-angle-right"></i>']
+    });
+});
+
+
+
+
 
 
 
