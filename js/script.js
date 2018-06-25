@@ -135,29 +135,90 @@ $(function () {
         navText: ['<i class = "fa fa-angle-left"></i>', '<i class = "fa fa-angle-right"></i>']
     });
 });
+/*
+=========================
+Google map
+=========================*/
+$(window).on("load", function () {
 
+    //map var 
+    var addressString = "Wyszyńskiego 63, 50-001 Wrocław"
+    var myLatlng = {
+        lat: 51.118010,
+        lng: 17.051591
+    };
 
+    //render google map {
+    var map = new google.maps.Map(document.getElementById("map"), {
+        zoom: 11,
+        center: myLatlng
+    });
 
+    //add marker
+    var marker = new google.maps.Marker({
+        position: myLatlng,
+        map: map,
+        title: "Click to see address"
 
+    });
 
+    //info window
+    var infowindow = new google.maps.InfoWindow({
+        content: addressString
+    });
 
+    //show info window
+    marker.addListener('click', function () {
+        infowindow.open(map, marker);
+    });
 
+});
+/*
+=========================
+Navifation
+=========================*/
+$(function () {
 
+    showHideNav()
 
+    $(window).scroll(function () {
 
+        showHideNav()
 
+    });
 
+    function showHideNav() {
+        if ($(window).scrollTop() > 50) {
+            //show white navbar
+            $("nav").addClass("white-nav-top");
+            //show dark logo
+            $(".navbar-brand img").attr("src", "img/logo/logo-dark.png")
+        } else {
+            //hide white navbar
+            $("nav").removeClass("white-nav-top");
+            //show dark logo
+            $(".navbar-brand img").attr("src", "img/logo/logo.png")
+        }
+    }
+});
 
+/*
+=========================
+Smooth scrolling
+=========================*/
+$(function () {
+    $("a.smooth-scroll").click(function (event) {
+        event.preventDefault();
+        //get section id
+        var section_id = $(this).attr("href");
+        $("html,body").animate({
+            scrollTop: $(section_id).offset().top - 64
+        }, 1250, "easeInOutExpo");
 
+    });
+});
 
-
-
-
-
-
-
-
-
-
-
-
+/*
+=========================
+Easing
+=========================*/
