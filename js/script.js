@@ -19,7 +19,15 @@ $(function () {
         autoplayHoverPause: true,
         nav: true,
         dots: false,
-        navText: ['<i class = "fa fa-angle-left"></i>', '<i class = "fa fa-angle-right"></i>']
+        navText: ['<i class = "fa fa-angle-left"></i>', '<i class = "fa fa-angle-right"></i>'],
+        responsive:{
+            0: {
+                items:1
+            },
+            480:{
+                items:2
+            }
+        }
     });
 });
 /*
@@ -193,11 +201,15 @@ $(function () {
             $("nav").addClass("white-nav-top");
             //show dark logo
             $(".navbar-brand img").attr("src", "img/logo/logo-dark.png")
+            //show back-to-top button
+            $(".btn-back-to-top").fadeIn();
         } else {
             //hide white navbar
             $("nav").removeClass("white-nav-top");
             //show dark logo
             $(".navbar-brand img").attr("src", "img/logo/logo.png")
+            //hide back-to-top button
+            $(".btn-back-to-top").fadeOut();
         }
     }
 });
