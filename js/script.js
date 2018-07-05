@@ -20,12 +20,12 @@ $(function () {
         nav: true,
         dots: false,
         navText: ['<i class = "fa fa-angle-left"></i>', '<i class = "fa fa-angle-right"></i>'],
-        responsive:{
+        responsive: {
             0: {
-                items:1
+                items: 1
             },
-            480:{
-                items:2
+            480: {
+                items: 2
             }
         }
     });
@@ -39,7 +39,7 @@ $(function () {
         $(".progress-bar").each(function () {
             $(this).animate({
                 width: $(this).attr("aria-valuenow") + "%"
-            }, 1000);
+            }, 2000);
         });;
 
         this.destroy();
@@ -141,15 +141,15 @@ $(function () {
         nav: true,
         dots: false,
         navText: ['<i class = "fa fa-angle-left"></i>', '<i class = "fa fa-angle-right"></i>'],
-         responsive:{
+        responsive: {
             0: {
-                items:2
+                items: 2
             },
-            480:{
-                items:3
+            480: {
+                items: 3
             },
-            768:{
-                items:6
+            768: {
+                items: 6
             }
         }
     });
@@ -190,9 +190,9 @@ $(window).on("load", function () {
     marker.addListener('click', function () {
         infowindow.open(map, marker);
     });
-    
+
     //resize function 
-    google.maps.event.addDomListener(window, "resize", function(){
+    google.maps.event.addDomListener(window, "resize", function () {
         var center = map.getCenter();
         google.maps.event.trigger(map, "resize");
         map.setCenter(center);
@@ -250,5 +250,31 @@ $(function () {
 
 /*
 =========================
-Easing
+Mobile menu
 =========================*/
+$(function () {
+    //show mob nav
+    $("#mobile-nav-open-btn").click(function () {
+        $("#mobile-nav").css("height", "100%");
+    });
+    //hide mob nav
+    $("#mobile-nav-close-btn, #mobile-nav a").click(function () {
+        $("#mobile-nav").css("height", "0%");
+    });
+});
+/*
+=========================
+Animation
+=========================*/
+//animate on scroll
+$(function () {
+    new WOW().init();
+});
+
+$(window).on("load", function () {
+    $("#home-heading-1").addClass("animated fadeInDown");
+    $("#home-heading-2").addClass("animated fadeInLeft");
+    $("#home-text").addClass("animated zoomIn");
+    $("#home-btn").addClass("animated zoomIn");
+    $("#arrow-down i").addClass("animated fadeInDown infinite");
+});
